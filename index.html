@@ -1,0 +1,147 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 XVR Layout Grid Simulator</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body>
+        <section>
+    <h2>Introduction</h2>
+    <p>This project ref. from<a href="https://github.com/james2doyle/zepto-dragswap">zepto-dragswap</a> .</p>
+    </section> 
+    <div>
+        <section>
+            <h2>layout1</h2>
+            <table class="sortable grid">
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>layout4</h2>
+            <table class="sortable grid">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>layout6</h2>
+            <table class="sortable grid">
+                <tr>
+                    <td colspan=2 rowspan=2>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+
+        </section>
+
+        <section>
+            <h2>layout8</h2>
+            <table class="sortable grid">
+                <tr>
+                    <td colspan=3 rowspan=3>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>layout9</h2>
+            <table class="sortable grid">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>layout16</h2>
+            <table class="sortable grid">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/zepto.dragswap.js"></script>
+    <script>
+        $(function () {
+            $('.sortable').dragswap({
+                element: 'td',
+                dropAnimation: true
+            });           
+        });
+    </script>
+</body>
+
+</html>
